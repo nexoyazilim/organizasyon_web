@@ -62,7 +62,7 @@ export default function About() {
         className="relative w-full h-[450px] overflow-hidden bg-cover bg-center"
         style={{
           backgroundImage:
-            'linear-gradient(rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.7) 100%), url("/arka_plan.jpg")',
+            `linear-gradient(rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.7) 100%), url("${import.meta.env.BASE_URL}arka_plan.jpg")`,
         }}
       >
         <div className="flex flex-col items-center justify-center h-full text-center text-white p-4">
@@ -92,7 +92,7 @@ export default function About() {
               <img
                 className="w-full h-auto object-cover transform transition-transform duration-700 group-hover:scale-110"
                 alt="Organizar ekibinin profesyonel bir fotoğrafı"
-                src="/public/yonetici_foto.png"
+                src={`${import.meta.env.BASE_URL}yonetici_foto.png`}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-amber-900/30 to-transparent"></div>
             </div>

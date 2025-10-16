@@ -34,7 +34,7 @@ export default function Header() {
           >
             <div className="relative">
               <img 
-                src="/logo.png" 
+                src={`${import.meta.env.BASE_URL}logo.png`}
                 alt="Organizar Logo" 
                 className={`transition-all duration-500 ${
                   isScrolled ? 'h-10' : 'h-12'

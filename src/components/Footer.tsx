@@ -9,7 +9,7 @@ export default function Footer() {
           <div className="space-y-4">
             <div className="flex items-center gap-3">
               <img 
-                src="/logo.png" 
+                src={`${import.meta.env.BASE_URL}logo.png`}
                 alt="Organizar Logo" 
                 className="h-10 w-auto"
               />
