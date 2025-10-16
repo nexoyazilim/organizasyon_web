@@ -12,17 +12,28 @@ import Concierge from './pages/Concierge'
 
 function App() {
   const [loading, setLoading] = useState(true)
+  const [initialLoad, setInitialLoad] = useState(true)
   const location = useLocation()
 
   useEffect(() => {
-    // Her sayfa değişikliğinde yükleme ekranı göster
-    setLoading(true)
-    const timer = setTimeout(() => {
-      setLoading(false)
-    }, 800) // 0.8 saniye yükleme ekranı
-
-    return () => clearTimeout(timer)
-  }, [location.pathname]) // location değiştiğinde çalış
+    // İlk yüklemede fontların ve CSS'in tamamen yüklenmesini bekle
+    if (initialLoad) {
+      Promise.all([
+        document.fonts.ready,
+        new Promise(resolve => setTimeout(resolve, 500))
+      ]).then(() => {
+        setLoading(false)
+        setInitialLoad(false)
+      })
+    } else {
+      // Sayfa geçişlerinde kısa yükleme
+      setLoading(true)
+      const timer = setTimeout(() => {
+        setLoading(false)
+      }, 600)
+      return () => clearTimeout(timer)
+    }
+  }, [location.pathname, initialLoad])
 
   if (loading) {
     return <Loading />
