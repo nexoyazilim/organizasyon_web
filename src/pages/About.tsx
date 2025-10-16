@@ -62,7 +62,7 @@ export default function About() {
         className="relative w-full h-[450px] overflow-hidden bg-cover bg-center"
         style={{
           backgroundImage:
-            `linear-gradient(rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.7) 100%), url("${import.meta.env.BASE_URL}arka_plan.jpg")`,
+            `linear-gradient(rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.7) 100%), url("${import.meta.env.BASE_URL}arka_plan.webp")`,
         }}
       >
         <div className="flex flex-col items-center justify-center h-full text-center text-white p-4">

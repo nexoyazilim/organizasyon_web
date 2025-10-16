@@ -9,7 +9,7 @@ export default function Services() {
           className="flex min-h-[380px] md:min-h-[480px] flex-col gap-6 bg-cover bg-center bg-no-repeat rounded-xl items-center justify-center p-4 text-center"
           style={{
             backgroundImage:
-              `linear-gradient(rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.5) 100%), url("${import.meta.env.BASE_URL}arka_plan.jpg")`,
+              `linear-gradient(rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.5) 100%), url("${import.meta.env.BASE_URL}arka_plan.webp")`,
           }}
         >
           <div className="flex flex-col gap-2 max-w-2xl">
@@ -53,7 +53,7 @@ export default function Services() {
             className="w-full bg-center bg-no-repeat aspect-[4/3] bg-cover rounded-xl"
             style={{
               backgroundImage:
-                `url("${import.meta.env.BASE_URL}salon_2.jpg")`,
+                `url("${import.meta.env.BASE_URL}salon_2.webp")`,
             }}
           ></div>
           <div>
@@ -75,7 +75,7 @@ export default function Services() {
             className="w-full bg-center bg-no-repeat aspect-[4/3] bg-cover rounded-xl"
             style={{
               backgroundImage:
-                `url("${import.meta.env.BASE_URL}salon_1.jpg")`,
+                `url("${import.meta.env.BASE_URL}salon_1.webp")`,
             }}
           ></div>
           <div>

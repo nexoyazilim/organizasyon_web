@@ -8,7 +8,7 @@ export default function Home() {
         className="relative w-full h-[700px] overflow-hidden bg-cover bg-center"
         style={{
           backgroundImage:
-            `linear-gradient(rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.7) 100%), url("${import.meta.env.BASE_URL}arka_plan.jpg")`,
+            `linear-gradient(rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.7) 100%), url("${import.meta.env.BASE_URL}arka_plan.webp")`,
         }}
       >
         <div className="flex flex-col items-center justify-center h-full text-center text-white p-4">
@@ -35,7 +35,7 @@ export default function Home() {
           <div className="order-1 group">
             <div className="relative overflow-hidden rounded-2xl shadow-2xl">
               <img
-                src={`${import.meta.env.BASE_URL}hizmet_1.jpg`}
+                src={`${import.meta.env.BASE_URL}hizmet_1.webp`}
                 alt="Organizasyon Hizmeti 1"
                 className="w-full h-[400px] object-cover transform transition-transform duration-700 group-hover:scale-110"
               />
@@ -94,7 +94,7 @@ export default function Home() {
           <div className="order-1 md:order-2 group">
             <div className="relative overflow-hidden rounded-2xl shadow-2xl">
               <img
-                src={`${import.meta.env.BASE_URL}hizmet_2.jpg`}
+                src={`${import.meta.env.BASE_URL}hizmet_2.webp`}
                 alt="Organizasyon Hizmeti 2"
                 className="w-full h-[400px] object-cover transform transition-transform duration-700 group-hover:scale-110"
               />
