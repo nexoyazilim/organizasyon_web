@@ -20,7 +20,7 @@ function App() {
     if (initialLoad) {
       Promise.all([
         document.fonts.ready,
-        new Promise(resolve => setTimeout(resolve, 500))
+        new Promise(resolve => setTimeout(resolve, 800))
       ]).then(() => {
         setLoading(false)
         setInitialLoad(false)
@@ -30,7 +30,7 @@ function App() {
       setLoading(true)
       const timer = setTimeout(() => {
         setLoading(false)
-      }, 600)
+      }, 500)
       return () => clearTimeout(timer)
     }
   }, [location.pathname, initialLoad])

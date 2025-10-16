@@ -14,10 +14,37 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=block" rel="stylesheet">
+    <style>
+      /* Inline critical CSS - fontlar yüklenene kadar gizle */
+      body {
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+      }
+      body.loaded {
+        visibility: visible;
+        opacity: 1;
+      }
+    </style>
   </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+    <script>
+      // Fontlar ve CSS yüklendiğinde body'yi göster
+      Promise.all([
+        document.fonts.ready,
+        new Promise(resolve => {
+          if (document.readyState === 'complete') {
+            resolve();
+          } else {
+            window.addEventListener('load', resolve);
+          }
+        })
+      ]).then(() => {
+        document.body.classList.add('loaded');
+      });
+    </script>
   </body>
 </html>
 
